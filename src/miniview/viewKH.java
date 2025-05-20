@@ -209,17 +209,14 @@ public class viewKH {
 
         sodienthoai = sdtkh.getText();
         tenkhachhang = tenkh.getText();
-        
 
         if (sodienthoai.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Vui lòng nhập số điện thoại khách hàng !", "Thông báo", JOptionPane.ERROR_MESSAGE);
             return;
         }
-
         KhachHang kht = new KhachHang(sodienthoai, tenkhachhang);
         KhachHang khh = kh.timkiem(kht);
         if (khh == null) {
-            idkh.setText("");
             sdtkh.setText("");
             tenkh.setText("");
             loadkh();

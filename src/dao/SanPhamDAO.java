@@ -20,13 +20,13 @@ public class SanPhamDAO implements DAOInterface<SanPham> {
                 String sql = "INSERT INTO `sanpham`(`idsanpham`, `tensanpham`, `gianhap`, `giaban`,`soluong`)"
                         + " VALUES ('" + t.getId() + "','" + t.getTensanpham() + "','" + t.getGianhap() + "','" + t.getGiaban() + "','" + t.getSoluong() + "')";
                 int kq = st.executeUpdate(sql);
-                JOptionPane.showMessageDialog(null, "da them san pham:" + t.getTensanpham(), "thong bao", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Đã thêm sản phẩm :" + t.getTensanpham(), "Thông báo", JOptionPane.INFORMATION_MESSAGE);
                 closeConnection(conn);
                 return kq;
             } else {
                 String sql = "UPDATE `sanpham` SET `soluong`=`soluong`+" + t.getSoluong() + " WHERE `idsanpham`=" + t.getId() + " ";
                 int kq = st.executeUpdate(sql);
-                JOptionPane.showMessageDialog(null, "Da them " + t.getSoluong() + " san pham ma:" + t.getId(), "thong bao", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Đã thêm " + t.getSoluong() + " Mã sản phẩm:" + t.getId(), "Thông báo", JOptionPane.INFORMATION_MESSAGE);
                 closeConnection(conn);
                 return kq;
             }

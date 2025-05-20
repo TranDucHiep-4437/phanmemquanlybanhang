@@ -224,6 +224,7 @@ public class viewTT {
 
                 JOptionPane.showMessageDialog(null, hoadon.toString(), "HÓA ĐƠN", JOptionPane.INFORMATION_MESSAGE);
                 bspgh.setRowCount(0);
+                tongtien.setText("0");
             }
             if (chon == JOptionPane.YES_OPTION) {
                 JPanel panel = new JPanel(new BorderLayout());
@@ -272,6 +273,7 @@ public class viewTT {
 
                     JOptionPane.showMessageDialog(null, hoadon.toString(), "HÓA ĐƠN", JOptionPane.INFORMATION_MESSAGE);
                     bspgh.setRowCount(0);
+                    tongtien.setText("0");
                 }
 
             }
@@ -319,6 +321,7 @@ public class viewTT {
         JOptionPane.showMessageDialog(null, hoadon.toString(), "Hoa đơn", JOptionPane.INFORMATION_MESSAGE);
         System.err.println(i);
         bspgh.setRowCount(0);
+        tongtien.setText("0");
 
     }
 
@@ -358,6 +361,7 @@ public class viewTT {
 
     public void rs() {
         bspgh.setRowCount(0);
+        tongtien.setText("0");
     }
 
 }
