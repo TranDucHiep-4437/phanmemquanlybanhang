@@ -54,7 +54,9 @@ Hoặc chạy trực tiếp bằng file **quanlybanhang.exe** trong thư mục a
 <img src="https://github.com/user-attachments/assets/82fc68d3-9e55-4f79-b2b6-8a6b4dcc9343" width="500"/>
 
 </div>
-# Liên hệ
+
+## Liên hệ
+
 Nếu bạn cần hỗ trợ cài đặt hoặc muốn góp ý để phần mềm ngày càng hoàn thiện hơn, xin vui lòng liên hệ:
 
 Email: hieptran262004@gmail.com
