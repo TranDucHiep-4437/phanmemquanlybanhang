@@ -29,7 +29,8 @@ Nếu chưa có JRE, hãy tải tại đây:
 ### Tài khoản
 Tên tài khoản : admin
 Mật khẩu : 123456
-### Giao diện 
+
+## Giao diện 
 <div align="center">
 
 ### Đăng nhập  
