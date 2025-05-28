@@ -7,9 +7,7 @@
 ##  Bắt đầu sử dụng
 
 1. Tải source code về:
-```bash
-https://github.com/TranDucHiep-4437/phanmemquanlybanhang
-```
+
 2. Cài đặt cơ sở dữ liệu
 Mở XAMPP, vào địa chỉ:
 
