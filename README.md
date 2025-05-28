@@ -8,7 +8,7 @@
 
 1. Tải source code về:
 ```bash
-git clone https://github.com/TranDucHiep-4437/phanmemquanlybanhang.git
+https://github.com/TranDucHiep-4437/phanmemquanlybanhang
 ```
 2. Cài đặt cơ sở dữ liệu
 Mở XAMPP, vào địa chỉ:
