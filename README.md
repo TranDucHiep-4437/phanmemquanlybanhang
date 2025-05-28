@@ -6,7 +6,7 @@
 
 ##  Bắt đầu sử dụng
 
-1. Tải source code về:
+1. Tải source code về
 
 2. Cài đặt cơ sở dữ liệu
 Mở XAMPP, vào địa chỉ:
