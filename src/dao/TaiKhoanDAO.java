@@ -2,6 +2,7 @@ package dao;
 
 import static dao.DatabaseConnection.closeConnection;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -119,26 +120,30 @@ public class TaiKhoanDAO implements DAOInterface<TaiKhoan> {
         return ketqua;
     }
 
-    public TaiKhoan dangnhap(String tentaikhoan, String matkhau) {
-        try {
-            Connection conn = DatabaseConnection.getConnection();
-            Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM taikhoan WHERE tentaikhoan = '" + tentaikhoan + "' AND matkhau = '" + matkhau + "'";
-            ResultSet rs = stmt.executeQuery(sql);
+   public TaiKhoan dangnhap(String tentaikhoan, String matkhau) {
+    try {
+        Connection conn = DatabaseConnection.getConnection();
+        String sql = "SELECT * FROM taikhoan WHERE tentaikhoan = ? AND matkhau = ?";
+        PreparedStatement pst = conn.prepareStatement(sql);
+        pst.setString(1, tentaikhoan);
+        pst.setString(2, matkhau);
+        ResultSet rs = pst.executeQuery();
 
-            if (rs.next()) {
-                TaiKhoan tk = new TaiKhoan(
-                        rs.getInt("idtaikhoan"),
-                        rs.getString("tentaikhoan"),
-                        rs.getString("matkhau"),
-                        rs.getString("vaitro")
-                );
-                closeConnection(conn);
-                return tk;
-            }
+        if (rs.next()) {
+            TaiKhoan tk = new TaiKhoan(
+                    rs.getInt("idtaikhoan"),
+                    rs.getString("tentaikhoan"),
+                    rs.getString("matkhau"),
+                    rs.getString("vaitro")
+            );
             closeConnection(conn);
-        } catch (Exception e) {
+            return tk;
         }
-        return null;
+        closeConnection(conn);
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+    return null;
+}
+
 }

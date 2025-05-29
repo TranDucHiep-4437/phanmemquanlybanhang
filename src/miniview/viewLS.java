@@ -116,12 +116,16 @@ public class viewLS {
         pane3.add(tslm);
         pane3.add(tslm3);
 
-        String[] columnNames = {"IDGD", "Ngày", "Thời gian", "SĐT Khách Hàng", "Tên Khách Hàng", "Tổng Tiền", "Tiền Lãi"};
-        bdsls = new DefaultTableModel(columnNames, 0);
+        String[] bttls = {"IDGD", "Ngày", "Thời gian", "SĐT Khách Hàng", "Tên Khách Hàng", "Tổng Tiền", "Tiền Lãi"};
+        bdsls = new DefaultTableModel(bttls, 0);
+        
         JTable tbsp = new JTable(bdsls);
         tbsp.setShowGrid(true);
         tbsp.setGridColor(Color.BLACK);
         tbsp.setAutoCreateRowSorter(true);
+        tbsp.getColumnModel().getColumn(6).setMinWidth(0);
+        tbsp.getColumnModel().getColumn(6).setMaxWidth(0);
+        tbsp.getColumnModel().getColumn(6).setWidth(0);
         JScrollPane scrollPane = new JScrollPane(tbsp);
         scrollPane.setBorder(BorderFactory.createTitledBorder("Danh sách giao dịch"));
         panel.add(scrollPane, BorderLayout.CENTER);

@@ -171,6 +171,11 @@ public class viewSP {
         table.setGridColor(Color.BLACK);
         table.setRowHeight(28);
         table.getTableHeader().setReorderingAllowed(false);
+        
+        table.getColumnModel().getColumn(3).setMinWidth(0);
+        table.getColumnModel().getColumn(3).setMaxWidth(0);
+        table.getColumnModel().getColumn(3).setWidth(0);
+        
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBorder(BorderFactory.createTitledBorder("Danh sách sản phẩm"));
 
