@@ -19,12 +19,6 @@
    
    Mở project bằng NetBeans.
 
-   Hoặc chạy trực tiếp bằng file **quanlybanhang.exe** trong thư mục app.
-
-   >**Yêu cầu Java**
-   >Nếu chưa có JRE, hãy tải tại đây:
-   https://www.oracle.com/java/technologies/javase-downloads.html)
-
 ### Tài khoản
 -Tên tài khoản : admin
 
